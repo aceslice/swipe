@@ -1,8 +1,7 @@
+import "./css/App.css";
 
-import './App.css'
-
-const App = () =>{
-return(<h1>Hola Mundo, Swipe</h1>)
-}
+const App = () => {
+  return <h1>Hola Mundo, Swipe</h1>;
+};
 
 export default App;
