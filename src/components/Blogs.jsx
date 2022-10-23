@@ -4,7 +4,7 @@ const Blogs = ({ articles }) => {
       {articles.map((article) => {
         return (
           <a href={article.url} key={article.url}>
-            <div className="card" >
+            <div className="card">
               <span
                 style={{ backgroundImage: `url(${article.urlToImage})` }}
               ></span>
@@ -12,7 +12,7 @@ const Blogs = ({ articles }) => {
               <div className="description">{article.description}</div>
               <footer>
                 <p className="author">
-                  By {article.author || article.source.name}
+                  {article.author || article.source.name}
                 </p>
                 <p className="time">{article.source.name}</p>
               </footer>
@@ -24,3 +24,4 @@ const Blogs = ({ articles }) => {
   );
 };
 export default Blogs;
+
