@@ -7,8 +7,10 @@ import searchImg from "./assets/search_96px.png";
 import toggle from "./assets/moon.png";
 import logo from "./assets/diversity_96px.png";
 const App = () => {
+  const queries = ["artificial intelligence","technology","meta", "fashion"];
+  const randomQuery = queries[Math.floor(Math.random() * queries.length)];
   const [input, setInput] = useState(" ");
-  const [query, setQuery] = useState("technology");
+  const [query, setQuery] = useState(randomQuery);
   const [data, setData] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -52,7 +54,7 @@ const App = () => {
           <input
             type="text"
             aria-label="search"
-            placeholder="Search article you want..."
+            placeholder="ex: artificial intelligence, technology, "
             value={input}
             onChange={(e) => {
               setInput(e.target.value);
