@@ -16,7 +16,8 @@ const App = () => {
   const [error, setError] = useState(null);
   const [recom, setRecom] = useState("Recommended For You");
 
-  const NEWS_API = `https://newsapi.org/v2/everything?q=${query}&apiKey=3c2e99de21374d3d8729d62a16752647`;
+  const API_KEY = import.meta.env.VITE_APP_NEWS_API_KEY;
+  const NEWS_API = `https://newsapi.org/v2/everything?q=${query}&apiKey=${API_KEY}`;
 
   useEffect(() => {
     fetch(NEWS_API)
