@@ -7,7 +7,7 @@ import searchImg from "./assets/search_96px.png";
 import toggle from "./assets/moon.png";
 import logo from "./assets/diversity_96px.png";
 const App = () => {
-  const queries = ["artificial intelligence","technology","meta", "fashion"];
+  const queries = ["artificial intelligence","technology","meta", "fashion", "gaming", "cloud"];
   const randomQuery = queries[Math.floor(Math.random() * queries.length)];
   const [input, setInput] = useState(" ");
   const [query, setQuery] = useState(randomQuery);
@@ -17,7 +17,7 @@ const App = () => {
   const [recom, setRecom] = useState("Recommended For You");
 
   const API_KEY = import.meta.env.VITE_APP_NEWS_API_KEY;
-  const NEWS_API = `https://newsapi.org/v2/everything?q=${query}&apiKey=${API_KEY}`;
+  const NEWS_API = `https://newsapi.org/v2/everything?q=${query}&apiKey=3c2e99de21374d3d8729d62a16752647`;
 
   useEffect(() => {
     fetch(NEWS_API)
@@ -54,7 +54,7 @@ const App = () => {
           <input
             type="text"
             aria-label="search"
-            placeholder="ex: artificial intelligence, technology, "
+            placeholder="Search article you want...."
             value={input}
             onChange={(e) => {
               setInput(e.target.value);
