@@ -1,4 +1,3 @@
-
 import "./css/App.css";
 import { useState, useEffect } from "react";
 import Header from "./components/Header";
@@ -7,7 +6,14 @@ import searchImg from "./assets/search_96px.png";
 import toggle from "./assets/moon.png";
 import logo from "./assets/diversity_96px.png";
 const App = () => {
-  const queries = ["artificial intelligence","technology","meta", "fashion", "gaming", "cloud"];
+  const queries = [
+    "artificial intelligence",
+    "technology",
+    "meta",
+    "fashion",
+    "gaming",
+    "cloud",
+  ];
   const randomQuery = queries[Math.floor(Math.random() * queries.length)];
   const [input, setInput] = useState(" ");
   const [query, setQuery] = useState(randomQuery);
@@ -67,9 +73,9 @@ const App = () => {
       {error && (
         <div className="error">
           <h1>{error}</h1>
-          <button>
-           <a href="https://www.linkedin.com/feed/update/urn:li:activity:6989970951304015872?updateEntityUrn=urn%3Ali%3Afs_updateV2%3A%28urn%3Ali%3Aactivity%3A6989970951304015872%2CFEED_DETAIL%2CEMPTY%2CDEFAULT%2Cfalse%29&lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base%3B4k%2F7KbHWRQKbiw4h7rthng%3D%3D">Watch Demo</a>
-          </button>
+          <a href="https://www.linkedin.com/feed/update/urn:li:activity:6989970951304015872?updateEntityUrn=urn%3Ali%3Afs_updateV2%3A%28urn%3Ali%3Aactivity%3A6989970951304015872%2CFEED_DETAIL%2CEMPTY%2CDEFAULT%2Cfalse%29&lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base%3B4k%2F7KbHWRQKbiw4h7rthng%3D%3D">
+            <button>View Demo</button>
+          </a>
         </div>
       )}
       {isLoading && (
