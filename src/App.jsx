@@ -67,12 +67,8 @@ const App = () => {
       {error && (
         <div className="error">
           <h1>{error}</h1>
-          <button
-            onClick={(e) => {
-              e.preventDefault();
-            }}
-          >
-            Try Again
+          <button>
+           <a href="https://www.linkedin.com/feed/update/urn:li:activity:6989970951304015872?updateEntityUrn=urn%3Ali%3Afs_updateV2%3A%28urn%3Ali%3Aactivity%3A6989970951304015872%2CFEED_DETAIL%2CEMPTY%2CDEFAULT%2Cfalse%29&lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base%3B4k%2F7KbHWRQKbiw4h7rthng%3D%3D">Watch Demo</a>
           </button>
         </div>
       )}
