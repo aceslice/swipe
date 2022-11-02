@@ -23,7 +23,7 @@ const App = () => {
   const [recom, setRecom] = useState("Recommended For You");
 
   const API_KEY = import.meta.env.VITE_APP_NEWS_API_KEY;
-  const NEWS_API = `https://newsapi.org/v2/everything?q=${query}&apiKey=3c2e99de21374d3d8729d62a16752647`;
+  const NEWS_API = `https://newsapi.org/v2/everything?q=${query}&apiKey=${API_KEY}`;
 
   useEffect(() => {
     fetch(NEWS_API)
@@ -73,6 +73,11 @@ const App = () => {
       {error && (
         <div className="error">
           <h1>{error}</h1>
+          <p>
+            Due to a reason or two, the data could not be displayed. Restoration
+            is in progess. Allow the button to take you to a preview video.
+          </p>
+
           <a href="https://www.linkedin.com/feed/update/urn:li:activity:6989970951304015872?updateEntityUrn=urn%3Ali%3Afs_updateV2%3A%28urn%3Ali%3Aactivity%3A6989970951304015872%2CFEED_DETAIL%2CEMPTY%2CDEFAULT%2Cfalse%29&lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base%3B4k%2F7KbHWRQKbiw4h7rthng%3D%3D">
             <button>View Demo</button>
           </a>

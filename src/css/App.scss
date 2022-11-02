@@ -1,8 +1,6 @@
 .App {
 }
-a{
-  text-decoration: none;
-}
+
 // Topnav
 .Topnav {
   display: flex;
@@ -38,8 +36,8 @@ a{
     align-items: center;
     position: relative;
     img {
-      height: 25px;
-      width: 25px;
+      height: 20px;
+      width: 20px;
       position: absolute;
       left: 20px;
     }
@@ -94,6 +92,9 @@ a{
   align-items: center;
   justify-content: space-evenly;
   flex-wrap: wrap;
+  a{
+    text-decoration: none;
+  }
   .card {
     width: 350px;
     border-radius: 10px;
@@ -130,11 +131,6 @@ a{
       display: flex;
       align-items: center;
       margin-bottom: 16px;
-      img {
-        height: 30px;
-        border-radius: 100%;
-        margin-right: 8px;
-      }
       .author {
         color: var(--grey);
         font-size: 16px;
@@ -158,13 +154,16 @@ a{
     color: var(--dark);
     margin-top: 40px;
   }
+ a{
+  width: 300px;
+ }
   button {
     height: 50px;
-    width: 300px;
+    width: 100%;
     background: var(--grey);
     color: #fff;
     border: none;
-    border-radius: 25px;
+    border-radius: 30px;
     font-size: 16px;
     font-family: var(--font);
     transition: 200ms ease-in-out;
