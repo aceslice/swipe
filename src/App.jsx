@@ -54,6 +54,7 @@ const App = () => {
             setQuery(e.target.lastElementChild.value);
             setInput(" ");
             setRecom(`Showing results for ${e.target.lastElementChild.value}`);
+            isLoading;
           }}
         >
           <img src={searchImg} alt="search image" />
