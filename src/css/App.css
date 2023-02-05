@@ -9,7 +9,7 @@
   top: 0px;
   background: #fff;
   z-index: 2;
-  padding-top: 10px;
+  padding: 10px;
   transition: 200ms ease-in-out;
 }
 .Topnav .logo {
@@ -88,7 +88,7 @@
 
 .Blogs {
   display: flex;
-  align-items: center;
+  align-items: left;
   justify-content: space-evenly;
   flex-wrap: wrap;
 }
@@ -138,7 +138,7 @@
   font-size: 16px;
   margin-right: 16px;
 }
-.Blogs .card footer .time {
+.Blogs .card footer .source {
   font-size: 14px;
   color: var(--light-grey);
   margin-right: 8px;

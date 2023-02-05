@@ -20,7 +20,7 @@ const App = () => {
   const [data, setData] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(null);
-  const [recom, setRecom] = useState("Recommended For You");
+  const [recomMessage, setRecomMessage] = useState("Recommended For You");
 
   const API_KEY = import.meta.env.VITE_APP_NEWS_API_KEY;
   const NEWS_API = `https://newsapi.org/v2/everything?q=${query}&apiKey=${API_KEY}`;
@@ -41,10 +41,12 @@ const App = () => {
       .catch((err) => {
         setError("Houston, we have a problem!");
         setIsLoading(false);
+        console.log(err.message)
       });
   }, [NEWS_API]);
   return (
     <div className="App">
+      {/* Code for navigation bar */}
       <div className="Topnav">
         <img src={logo} alt="swipe logo" className="logo" />
         <form
@@ -53,8 +55,7 @@ const App = () => {
             e.preventDefault();
             setQuery(e.target.lastElementChild.value);
             setInput(" ");
-            setRecom(`Showing results for ${e.target.lastElementChild.value}`);
-            
+            setRecomMessage(`Showing results for ${e.target.lastElementChild.value}`);
           }}
         >
           <img src={searchImg} alt="search image" />
@@ -70,7 +71,11 @@ const App = () => {
         </form>
         <img src={toggle} alt="toggle image" className="toggle" />
       </div>
-      <Header message={recom} />
+
+      {/* Set message for user on new search done */}
+      <Header message={recomMessage} />
+
+      {/* Error display */}
       {error && (
         <div className="error">
           <h1>{error}</h1>
@@ -84,11 +89,15 @@ const App = () => {
           </a>
         </div>
       )}
+
+      {/* Show loading animation or message when data is being fetched form the API */}
       {isLoading && (
         <div>
           <h1>Loading</h1>
         </div>
       )}
+
+      {/* Display articles when the aricles comditions are true or the articles exist */}
       {data && <Blogs articles={data} />}
     </div>
   );
