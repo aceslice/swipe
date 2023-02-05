@@ -13,6 +13,11 @@ const App = () => {
     "fashion",
     "gaming",
     "cloud",
+    "social networking",
+    "cyber security",
+    "meta",
+    "tesla",
+    "quantum computing",
   ];
   const randomQuery = queries[Math.floor(Math.random() * queries.length)];
   const [input, setInput] = useState(" ");
@@ -41,7 +46,7 @@ const App = () => {
       .catch((err) => {
         setError("Houston, we have a problem!");
         setIsLoading(false);
-        console.log(err.message)
+        console.log(err.message);
       });
   }, [NEWS_API]);
   return (
@@ -55,7 +60,9 @@ const App = () => {
             e.preventDefault();
             setQuery(e.target.lastElementChild.value);
             setInput(" ");
-            setRecomMessage(`Showing results for ${e.target.lastElementChild.value}`);
+            setRecomMessage(
+              `Showing results for ${e.target.lastElementChild.value}`
+            );
           }}
         >
           <img src={searchImg} alt="search image" />

@@ -54,7 +54,7 @@
 }
 .Topnav .search input:focus {
   border: 2px solid var(--light-grey);
-  width: 800px;
+  width: 600px;
 }
 
 .Header {
@@ -184,6 +184,10 @@
     display: block;
     width: 100%;
     padding-bottom: 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    float: left;
   }
   .Topnav .logo {
     display: none;
@@ -192,7 +196,7 @@
     display: none;
   }
   .Topnav input {
-    max-width: 100%;
+    width: 70%;
   }
   .Header button {
     display: none;
