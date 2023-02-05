@@ -18,6 +18,7 @@ const App = () => {
     "meta",
     "tesla",
     "quantum computing",
+    "chat gpt",
   ];
   const randomQuery = queries[Math.floor(Math.random() * queries.length)];
   const [input, setInput] = useState(" ");
