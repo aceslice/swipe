@@ -28,11 +28,11 @@ const App = () => {
   const [error, setError] = useState(null);
   const [recomMessage, setRecomMessage] = useState("Recommended For You");
 
-  const API_KEY = import.meta.env.VITE_APP_NEWS_API_KEY;
-  const NEWS_API = `https://newsapi.org/v2/everything?q=${query}&apiKey=${API_KEY}`;
+  const API_KEY = import.meta.env.VITE_APP_GNEWS_API_KEY;
+  const GNEWS_API = `https://gnews.io/api/v4/search?q=${query}&token=${API_KEY}&lang=en&country=us`;
 
   useEffect(() => {
-    fetch(NEWS_API)
+    fetch(GNEWS_API)
       .then((res) => {
         if (!res.ok) {
           throw Error("Something went wrong");
@@ -43,13 +43,14 @@ const App = () => {
         setData(data.articles);
         setIsLoading(false);
         setError(null);
+        console.log(data);
       })
       .catch((err) => {
         setError("Houston, we have a problem!");
         setIsLoading(false);
         console.log(err.message);
       });
-  }, [NEWS_API]);
+  }, [GNEWS_API]);
   return (
     <div className="App">
       {/* Code for navigation bar */}
