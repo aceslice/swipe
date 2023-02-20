@@ -106,7 +106,7 @@ const App = () => {
         </div>
       )}
 
-      {/* Display articles when the aricles conditions are true or the articles exist */}
+      {/* Display articles when the aricles comditions are true or the articles exist */}
       {data && <Blogs articles={data} />}
     </div>
   );
