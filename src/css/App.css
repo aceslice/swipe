@@ -18,7 +18,7 @@
 .Topnav .toggle {
   height: 45px;
   width: 45px;
-  transition: 200mes ease-in-out;
+  transition: 200ms ease-in-out;
   cursor: pointer;
 }
 .Topnav .toggle:hover {
@@ -45,7 +45,7 @@
   padding: 24px 54px;
   border: 2px solid #f9f9f9;
   outline: none;
-  border-radius: 25px;
+  border-radius: 30px;
   font-family: var(--font);
   transition: 200ms ease;
   font-size: 15px;
