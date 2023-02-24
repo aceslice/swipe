@@ -12,7 +12,7 @@ const Header = ({ message }) => {
   return (
     <div className="Header">
       <span>
-        <p>{greeting}</p>
+        <p>{greeting},</p>
         <h1>{message}</h1>
       </span>
       <button>View More</button>

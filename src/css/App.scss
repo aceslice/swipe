@@ -1,11 +1,10 @@
-
 // Topnav
 .Topnav {
   display: flex;
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
   position: sticky;
   top: 0px;
   background: #fff;
@@ -53,6 +52,7 @@
       &:focus {
         border: 2px solid var(--light-grey);
         width: 600px;
+        max-width: 100%;
       }
     }
   }
@@ -154,12 +154,10 @@
     color: var(--dark);
     margin-top: 40px;
   }
- a{
-  width: 300px;
- }
   button {
     height: 50px;
-    width: 100%;
+    width: 300px;
+    max-width: 100%;
     background: var(--grey);
     color: #fff;
     border: none;
@@ -181,11 +179,6 @@
   .Topnav {
     display: block;
     width: 100%;
-    padding-bottom: 20px;
-    position: fixed;
-    top: 0;
-    left: 0;
-    float: left;
     .logo {
       display: none;
     }
