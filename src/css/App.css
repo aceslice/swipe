@@ -40,7 +40,7 @@
   left: 20px;
 }
 .Topnav .search input {
-  width: 0;
+  width: 600px;
   height: 32px;
   padding: 24px 54px;
   border: 2px solid #f9f9f9;
@@ -53,8 +53,6 @@
 }
 .Topnav .search input:focus {
   border: 2px solid var(--light-grey);
-  width: 600px;
-  max-width: 100%;
 }
 
 .Header {
